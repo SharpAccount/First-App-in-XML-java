@@ -39,7 +39,8 @@
             android:layout_marginBottom="17dp"
             android:background="@drawable/edit_text_style"
             android:inputType="textEmailAddress"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/EmailInput"/>
 
         <TextView
             style="@style/blueText"
@@ -53,7 +54,8 @@
             android:layout_marginBottom="17dp"
             android:background="@drawable/edit_text_style"
             android:inputType="textPassword"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/PassInput"/>
     </LinearLayout>
 
     <ImageButton
@@ -95,7 +97,8 @@
             android:background="@drawable/signing_button"
             android:text="Sign up"
             android:textSize="22sp"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="MissingConstraints"
+            android:onClick="openSignUp"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
