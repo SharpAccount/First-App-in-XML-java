@@ -107,7 +107,8 @@
             android:background="@drawable/signing_button"
             android:text="Cancel"
             android:textSize="22sp"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="MissingConstraints"
+            android:onClick="goPreviousPage"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

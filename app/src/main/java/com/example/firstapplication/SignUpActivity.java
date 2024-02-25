@@ -28,4 +28,8 @@ public class SignUpActivity extends AppCompatActivity {
         passInput.setText(args.getString("password"));
         passInputConfirm.setText(args.getString("password"));
     }
+
+    public void goPreviousPage(View view) {
+        finish();
+    }
 }

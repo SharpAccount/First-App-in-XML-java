@@ -15,7 +15,7 @@ public class SignInActivity extends AppCompatActivity {
         setContentView(R.layout.activity_sign_in);
     }
 
-    public void openSignUp(View view){
+    public void openSignUp(View view) {
         Intent intent = new Intent(this, SignUpActivity.class);
 
         EditText emailInput = findViewById(R.id.EmailInput);
