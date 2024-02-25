@@ -4,28 +4,27 @@ import android.util.Log;
 
 import java.io.Serializable;
 
-public class User {
-    private String login;
+public class User implements Serializable {
+    private String email;
     private String password;
 
-    public String getLogin() {
-        return login;
+    public String Email() {
+        return email;
     }
 
-    public String getPassword() {
+    public void Email(String _email) {
+        email = _email;
+    }
+    public String Password() {
         return password;
     }
-
-    public void setLogin(String _login) {
-        login = _login;
-    }
-
-    public void setPassword(String _password) {
+    public void Password(String _password) {
         password = _password;
     }
 
-    public User(String _login, String _password){
-        login = _login;
+
+    public User(String _email, String _password){
+        email = _email;
         password = _password;
     }
 }

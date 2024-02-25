@@ -2,6 +2,7 @@ package com.example.firstapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -18,15 +19,15 @@ public class SignUpActivity extends AppCompatActivity {
     }
 
     private void setData() {
-        Bundle args = getIntent().getExtras();
-
         EditText emailInput = findViewById(R.id.EmailInput);
         EditText passInput = findViewById(R.id.PassInput);
-        EditText passInputConfirm = findViewById(R.id.PassInputConfirm);
 
-        emailInput.setText(args.getString("email"));
-        passInput.setText(args.getString("password"));
-        passInputConfirm.setText(args.getString("password"));
+        User userData = (User) getIntent().getSerializableExtra(User.class.getName());
+
+        if (userData != null) {
+            emailInput.setText(userData.Email());
+            passInput.setText(userData.Password());
+        }
     }
 
     public void goPreviousPage(View view) {

@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.EditText;
 
 public class SignInActivity extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -16,17 +15,15 @@ public class SignInActivity extends AppCompatActivity {
     }
 
     public void openSignUp(View view) {
-        Intent intent = new Intent(this, SignUpActivity.class);
-
         EditText emailInput = findViewById(R.id.EmailInput);
         EditText passInput = findViewById(R.id.PassInput);
 
         String emailText = emailInput.getText().toString();
         String passText = passInput.getText().toString();
 
-        intent.putExtra("email", emailText);
-        intent.putExtra("password", passText);
-
+        User userData = new User(emailText, passText);
+        Intent intent = new Intent(this, SignUpActivity.class);
+        intent.putExtra(User.class.getName(), userData);
         startActivity(intent);
     }
 
